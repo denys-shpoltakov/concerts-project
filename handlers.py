@@ -1,6 +1,6 @@
 from aiogram import Dispatcher, types, Bot, executor
 import texts_ru, texts_en
-from texts_ru import GREETINGS, HELP_CMD, DESC_CMD
+from texts_ru import GREETINGS, HELP_CMD, DESC_CMD, EVENTS_CAPTION
 from dispatcher import dp
 from keyboards import start_kb
 
@@ -17,3 +17,9 @@ async def help_cmd(message: types.Message):
 async def desc_cmd(message: types.Message):
     await message.bot.send_message(chat_id=message.from_user.id,
                                    text=DESC_CMD)
+    
+@dp.message_handler(commands=['events'])
+async def events_cmd(message: types.Message):
+    await message.bot.send_photo(chat_id=message.from_user.id,
+                                 caption=EVENTS_CAPTION,
+                                 photo='https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp')
