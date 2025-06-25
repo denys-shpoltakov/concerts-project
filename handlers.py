@@ -3,7 +3,7 @@ import texts_ru, texts_en
 from texts_ru import GREETINGS, HELP_CMD, DESC_CMD, EVENTS_CAPTION
 from aiogram.dispatcher.filters import Text
 from dispatcher import dp
-from keyboards import start_kb
+from keyboards import start_kb, events_kb
 from aiogram.types import InputFile
 
 @dp.message_handler(commands=['start'])
@@ -34,4 +34,5 @@ async def events_cmd(message: types.Message):
     kizaru_photo = InputFile('kizaru.jpg')
     await message.bot.send_photo(chat_id=message.from_user.id,
                                  caption=EVENTS_CAPTION,
-                                 photo=kizaru_photo)
+                                 photo=kizaru_photo,
+                                 reply_markup=events_kb)
