@@ -31,7 +31,7 @@ async def desc_cmd(message: types.Message):
     
 @dp.message_handler(commands=['events'])
 async def events_cmd(message: types.Message):
-    kizaru_photo = InputFile('kizaru.jpg')
+    kizaru_photo = InputFile('photos/kizaru.jpg')
     await message.bot.send_photo(chat_id=message.from_user.id,
                                  caption=EVENTS_CAPTION,
                                  photo=kizaru_photo,
