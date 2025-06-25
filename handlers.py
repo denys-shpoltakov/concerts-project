@@ -4,6 +4,7 @@ from texts_ru import GREETINGS, HELP_CMD, DESC_CMD, EVENTS_CAPTION
 from aiogram.dispatcher.filters import Text
 from dispatcher import dp
 from keyboards import start_kb
+from aiogram.types import InputFile
 
 @dp.message_handler(commands=['start'])
 async def start_cmd(message: types.Message):
@@ -30,6 +31,7 @@ async def desc_cmd(message: types.Message):
     
 @dp.message_handler(commands=['events'])
 async def events_cmd(message: types.Message):
+    kizaru_photo = InputFile('kizaru.jpg')
     await message.bot.send_photo(chat_id=message.from_user.id,
                                  caption=EVENTS_CAPTION,
-                                 photo='https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp')
+                                 photo=kizaru_photo)
