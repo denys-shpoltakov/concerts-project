@@ -1,6 +1,6 @@
 from aiogram import Dispatcher, types, Bot, executor
 import texts_ru, texts_en
-from texts_ru import GREETINGS, HELP_CMD, DESC_CMD, EVENTS_CAPTION
+from texts_ru import GREETINGS, HELP_CMD, DESC_CMD, EVENTS_CAPTION, MAIN_MENU_TEXT
 from aiogram.dispatcher.filters import Text
 from dispatcher import dp
 from keyboards import start_kb, events_kb
@@ -9,6 +9,11 @@ from aiogram.types import InputFile
 @dp.message_handler(commands=['start'])
 async def start_cmd(message: types.Message):
     await message.reply(GREETINGS,
+                        reply_markup=start_kb)
+    
+@dp.message_handler(Text(equals='Главное меню'))
+async def start_cmd(message: types.Message):
+    await message.reply(MAIN_MENU_TEXT,
                         reply_markup=start_kb)
 
 @dp.message_handler(Text(equals='Помощь'))
