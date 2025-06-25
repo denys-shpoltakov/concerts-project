@@ -3,5 +3,6 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 start_kb = ReplyKeyboardMarkup(resize_keyboard=True)
 help_btn = KeyboardButton('Помощь')
+desc_btn = KeyboardButton('Описание бота')
 
-start_kb.add(help_btn)
+start_kb.add(help_btn).insert(desc_btn)

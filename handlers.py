@@ -18,6 +18,11 @@ async def help_filter_cmd(message: types.Message):
 async def help_cmd(message: types.Message):
     await message.reply(HELP_CMD)
 
+@dp.message_handler(Text(equals='Описание бота'))
+async def desc_filer_cmd(message: types.Message):
+    await message.bot.send_message(chat_id=message.from_user.id,
+                                   text=DESC_CMD)
+
 @dp.message_handler(commands=['description'])
 async def desc_cmd(message: types.Message):
     await message.bot.send_message(chat_id=message.from_user.id,
