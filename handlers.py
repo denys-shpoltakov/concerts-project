@@ -5,6 +5,7 @@ from aiogram.dispatcher.filters import Text
 from dispatcher import dp
 from keyboards import start_kb, events_kb
 from aiogram.types import InputFile
+import artists
 
 @dp.message_handler(commands=['start'])
 async def start_cmd(message: types.Message):
