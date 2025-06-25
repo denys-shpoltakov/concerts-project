@@ -6,7 +6,7 @@ help_btn = KeyboardButton('Помощь')
 desc_btn = KeyboardButton('Описание бота')
 events_btn = KeyboardButton('Посмотреть мероприятия')
 
-start_kb.add(help_btn).insert(desc_btn)
+start_kb.add(help_btn).insert(desc_btn, events_btn)
 
 #--------------------------------------#
 
