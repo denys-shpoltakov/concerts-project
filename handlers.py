@@ -29,6 +29,14 @@ async def desc_cmd(message: types.Message):
     await message.bot.send_message(chat_id=message.from_user.id,
                                    text=DESC_CMD)
     
+@dp.message_handler(Text(equals='Посмотреть мероприятия'))
+async def events_filters_cmd(message: types.Message):
+    kizaru_photo = InputFile('photos/kizaru.jpg')
+    await message.bot.send_photo(chat_id=message.from_user.id,
+                                 caption=EVENTS_CAPTION,
+                                 photo=kizaru_photo,
+                                 reply_markup=events_kb)
+
 @dp.message_handler(commands=['events'])
 async def events_cmd(message: types.Message):
     kizaru_photo = InputFile('photos/kizaru.jpg')
