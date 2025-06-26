@@ -19,7 +19,7 @@ async def start_cmd(message: types.Message):
 
 @dp.message_handler(Text(equals='Помощь'))
 async def help_filter_cmd(message: types.Message):
-    gif_help = InputFile('gifs/Wow-gif.gif')
+    gif_help = InputFile('gifs/IMG_1916.gif')
     await message.bot.send_animation(chat_id=message.from_user.id,
                                      caption=HELP_CMD,
                                      animation=gif_help)
