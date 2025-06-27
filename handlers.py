@@ -17,17 +17,13 @@ async def start_cmd(message: types.Message):
     await message.reply(MAIN_MENU_TEXT,
                         reply_markup=start_kb)
 
-# @dp.message_handler(Text(equals='Помощь'))
-# async def help_filter_cmd(message: types.Message):
-#     gif_help = InputFile('gifs/IMG_1916.gif')
-#     await message.bot.send_animation(chat_id=message.from_user.id,
-#                                      caption=HELP_CMD,
-#                                      animation=gif_help)
-
 @dp.message_handler(Text(equals='Помощь'))
 async def help_filter_cmd(message: types.Message):
-    await message.bot.send_message(chat_id=message.from_user.id,
-                                   text=HELP_CMD)
+    photo_help = InputFile('photos/photo_help.jpg')
+    await message.bot.send_photo(chat_id=message.from_user.id,
+                                 caption=HELP_CMD,
+                                 photo=photo_help)
+
 
 @dp.message_handler(commands=['help'])
 async def help_cmd(message: types.Message):
