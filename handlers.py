@@ -33,7 +33,7 @@ async def help_filter_cmd(message: types.Message):
 async def help_cmd(message: types.Message):
     await message.reply(HELP_CMD)
 
-@dp.message_handler(Text(equals='Описание бота'))
+@dp.message_handler(Text(equals='F.A.Q'))
 async def desc_filer_cmd(message: types.Message):
     await message.bot.send_message(chat_id=message.from_user.id,
                                    text=DESC_CMD)
