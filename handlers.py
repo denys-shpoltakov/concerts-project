@@ -19,10 +19,10 @@ async def start_cmd(message: types.Message):
 
 @dp.message_handler(Text(equals='Помощь'))
 async def help_filter_cmd(message: types.Message):
-    photo_help = InputFile('photos/photo_help.jpg')
+    help_photo = InputFile('photos/photo_help.jpg')
     await message.bot.send_photo(chat_id=message.from_user.id,
                                  caption=HELP_CMD,
-                                 photo=photo_help)
+                                 photo=help_photo)
 
 
 @dp.message_handler(commands=['help'])
