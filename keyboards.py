@@ -1,5 +1,6 @@
 from aiogram import types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 start_kb = ReplyKeyboardMarkup(resize_keyboard=True)
 
@@ -17,3 +18,10 @@ main_menu_btn = KeyboardButton('Главное меню')
 kizaru_btn = KeyboardButton('kizaru')
 
 events_kb.add(kizaru_btn, main_menu_btn)
+
+#--------------------------------------#
+
+kizaru_buy_ticket_kb = InlineKeyboardMarkup(row_width=1)
+kizaru_buy_ticket_btn = InlineKeyboardButton(url='https://google.com', text='Приобрести билет')
+
+kizaru_buy_ticket_kb.add(kizaru_buy_ticket_btn)

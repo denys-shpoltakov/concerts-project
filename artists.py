@@ -1,6 +1,6 @@
 from aiogram import Dispatcher, types, Bot, executor
 from aiogram.dispatcher.filters import Text
-from keyboards import start_kb, events_kb
+from keyboards import start_kb, events_kb, kizaru_buy_ticket_kb
 from dispatcher import dp
 from aiogram.types import InputFile
 from texts_ru import KIZARU_TEXT
@@ -12,4 +12,4 @@ async def kizaru_cmd(message: types.Message):
     await message.bot.send_video(chat_id=message.from_user.id,
                                  caption=KIZARU_TEXT,
                                  video=kizaru_video,
-                                 reply_markup=events_kb)
+                                 reply_markup=kizaru_buy_ticket_kb)
