@@ -34,7 +34,7 @@ async def desc_filer_cmd(message: types.Message):
     await message.bot.send_message(chat_id=message.from_user.id,
                                    text=DESC_CMD)
 
-@dp.message_handler(commands=['description'])
+@dp.message_handler(commands=['description', 'desc'])
 async def desc_cmd(message: types.Message):
     await message.bot.send_message(chat_id=message.from_user.id,
                                    text=DESC_CMD)
