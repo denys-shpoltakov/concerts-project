@@ -16,8 +16,9 @@ start_kb.insert(events_btn)
 events_kb = ReplyKeyboardMarkup(resize_keyboard=True)
 main_menu_btn = KeyboardButton('Главное меню')
 kizaru_btn = KeyboardButton('kizaru')
+bbt_btn = KeyboardButton('Big Baby Tape')
 
-events_kb.add(kizaru_btn, main_menu_btn)
+events_kb.add(kizaru_btn, main_menu_btn).insert(bbt_btn)
 
 #--------------------------------------#
 
