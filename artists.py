@@ -8,8 +8,16 @@ from texts_ru import KIZARU_TEXT
 
 @dp.message_handler(Text(equals='kizaru'))
 async def kizaru_cmd(message: types.Message):
-    kizaru_video = InputFile('videos/kizaru.mp4')
-    await message.bot.send_video(chat_id=message.from_user.id,
+    kizaru_photo = InputFile('photos/kizaru_conc.jpg')
+    await message.bot.send_photo(chat_id=message.from_user.id,
                                  caption=KIZARU_TEXT,
-                                 video=kizaru_video,
+                                 photo=kizaru_photo,
+                                 reply_markup=kizaru_buy_ticket_kb)
+    
+@dp.message_handler(Text(equals='Big Baby Tape'))
+async def kizaru_cmd(message: types.Message):
+    bbt_photo = InputFile('photos/bigbabytape.jpg')
+    await message.bot.send_photo(chat_id=message.from_user.id,
+                                 caption=KIZARU_TEXT,
+                                 photo=bbt_photo,
                                  reply_markup=kizaru_buy_ticket_kb)
