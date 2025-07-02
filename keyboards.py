@@ -18,7 +18,7 @@ main_menu_btn = KeyboardButton('Главное меню')
 kizaru_btn = KeyboardButton('kizaru')
 bbt_btn = KeyboardButton('Big Baby Tape')
 
-events_kb.add(kizaru_btn, main_menu_btn).insert(bbt_btn)
+events_kb.add(kizaru_btn, bbt_btn).insert(main_menu_btn)
 
 #--------------------------------------#
 
