@@ -3,7 +3,7 @@ from aiogram.dispatcher.filters import Text
 from keyboards import start_kb, events_kb, kizaru_buy_ticket_kb, babytape_buy_ticket_kb, boris_brejcha_buy_ticket_kb
 from dispatcher import dp
 from aiogram.types import InputFile
-from texts_ru import KIZARU_TEXT, BBT_TEXT
+from texts_ru import KIZARU_TEXT, BBT_TEXT, BREJCHA_TEXT
 
 
 @dp.message_handler(Text(equals='kizaru'))
