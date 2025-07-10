@@ -33,3 +33,11 @@ babytape_buy_ticket_kb = InlineKeyboardMarkup(row_width=1)
 babytape_buy_ticket_btn = InlineKeyboardButton(url='https://google.com', text='Приобрести билет')
 
 babytape_buy_ticket_kb.add(babytape_buy_ticket_btn)
+
+
+#-----------------Boris Brejcha---------------------#
+
+boris_brejcha_buy_ticket_kb = InlineKeyboardMarkup(row_width=1)
+boris_brejcha_buy_ticket_btn = InlineKeyboardButton(url='https://google.com', text='Приобрести билет')
+
+boris_brejcha_buy_ticket_kb.add(boris_brejcha_buy_ticket_btn)
