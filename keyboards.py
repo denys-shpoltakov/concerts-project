@@ -20,9 +20,16 @@ bbt_btn = KeyboardButton('Big Baby Tape')
 
 events_kb.add(kizaru_btn, bbt_btn).insert(main_menu_btn)
 
-#--------------------------------------#
+#-----------------KIZARU---------------------#
 
 kizaru_buy_ticket_kb = InlineKeyboardMarkup(row_width=1)
 kizaru_buy_ticket_btn = InlineKeyboardButton(url='https://google.com', text='Приобрести билет')
 
 kizaru_buy_ticket_kb.add(kizaru_buy_ticket_btn)
+
+#-----------------Big Baby Tape---------------------#
+
+babytape_buy_ticket_kb = InlineKeyboardMarkup(row_width=1)
+babytape_buy_ticket_btn = InlineKeyboardButton(url='https://google.com', text='Приобрести билет')
+
+babytape_buy_ticket_kb.add(babytape_buy_ticket_btn)
