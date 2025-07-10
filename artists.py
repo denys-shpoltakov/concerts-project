@@ -21,3 +21,11 @@ async def kizaru_cmd(message: types.Message):
                                  caption=BBT_TEXT,
                                  photo=bbt_photo,
                                  reply_markup=kizaru_buy_ticket_kb)
+
+@dp.message_handler(Text(equals='Boris Brejcha'))
+async def kizaru_cmd(message: types.Message):
+    bbt_photo = InputFile('photos/bigbabytape.jpg')
+    await message.bot.send_photo(chat_id=message.from_user.id,
+                                 caption=BBT_TEXT,
+                                 photo=bbt_photo,
+                                 reply_markup=kizaru_buy_ticket_kb)
