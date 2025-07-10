@@ -1,6 +1,6 @@
 from aiogram import Dispatcher, types, Bot, executor
 from aiogram.dispatcher.filters import Text
-from keyboards import start_kb, events_kb, kizaru_buy_ticket_kb, babytape_buy_ticket_kb
+from keyboards import start_kb, events_kb, kizaru_buy_ticket_kb, babytape_buy_ticket_kb, boris_brejcha_buy_ticket_kb
 from dispatcher import dp
 from aiogram.types import InputFile
 from texts_ru import KIZARU_TEXT, BBT_TEXT
@@ -28,4 +28,4 @@ async def kizaru_cmd(message: types.Message):
     await message.bot.send_photo(chat_id=message.from_user.id,
                                  caption=BBT_TEXT,
                                  photo=boris_brejcha_photo,
-                                 reply_markup=kizaru_buy_ticket_kb)
+                                 reply_markup=boris_brejcha_buy_ticket_kb)
