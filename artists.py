@@ -26,6 +26,6 @@ async def kizaru_cmd(message: types.Message):
 async def kizaru_cmd(message: types.Message):
     boris_brejcha_photo = InputFile('photos/boris-brejcha.jpg')
     await message.bot.send_photo(chat_id=message.from_user.id,
-                                 caption=BBT_TEXT,
+                                 caption=BREJCHA_TEXT,
                                  photo=boris_brejcha_photo,
                                  reply_markup=boris_brejcha_buy_ticket_kb)
