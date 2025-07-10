@@ -17,8 +17,9 @@ events_kb = ReplyKeyboardMarkup(resize_keyboard=True)
 main_menu_btn = KeyboardButton('Главное меню')
 kizaru_btn = KeyboardButton('kizaru')
 bbt_btn = KeyboardButton('Big Baby Tape')
+boris_brejcha_btn = KeyboardButton('Boris Brejcha')
 
-events_kb.add(kizaru_btn, bbt_btn).insert(main_menu_btn)
+events_kb.add(kizaru_btn, bbt_btn).add(boris_brejcha_btn).insert(main_menu_btn)
 
 #-----------------KIZARU---------------------#
 
