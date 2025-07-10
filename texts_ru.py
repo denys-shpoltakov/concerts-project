@@ -35,3 +35,8 @@ BBT_TEXT = """
 Big Baby Tape - ближайшие выступления:
 Москва - VK Fest
 Дата - **.**.25"""
+
+BREJCHA_TEXT = """
+Boris Brejcha - ближайшие выступления:
+Amsterdam - Club Vibes
+Дата - **.**.25"""
